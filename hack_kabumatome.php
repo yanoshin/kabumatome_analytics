@@ -114,8 +114,8 @@ foreach ($articles as $article) {
             }
             $ranking[$twitter_id]++;
 
-            echo "\x1b[1A\x1b[K"; //表示行追加せず、１行を更新
-            echo sprintf(" Twitter ID ： %s \n", $twitter_id);
+            //echo "\x1b[1A\x1b[K"; //表示行追加せず、１行を更新
+            //echo sprintf(" Twitter ID ： %s \n", $twitter_id);
         });
     });
 }

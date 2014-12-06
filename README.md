@@ -1,11 +1,13 @@
-kabumatome_analytics
+市況かぶ全力2階建さん 登場者ランキング1024
 ====================
-
-市況かぶ全力2階建さんをゴニョゴニョ
 
 Requirements
 
 This depends on PHP 5.4+ and Guzzle 4+
+
+** Description
+
+
 
 
 curl -sS https://getcomposer.org/installer | php
