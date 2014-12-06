@@ -31,7 +31,7 @@ while ($keep_fetching === true) {
 
     $index_url = sprintf(TMPL_URL_INDEX, $index);
     echo sprintf("記事一覧を取得中：%s \n", $index_url);
-    sleep(1);//お行儀よく待ちましょう
+    sleep(1); //お行儀よく待ちましょう
     $crawler = $client->request('GET', $index_url);
 
     $crawler->filter('header.article-header')->each(function ($node) {
@@ -75,9 +75,10 @@ while ($keep_fetching === true) {
  * 記事をひとつひとつ拾って、集計する
  */
 
+$unique = array();
 $ranking = array();
 foreach ($articles as $article) {
-    sleep(1);//お行儀よく待ちましょう
+    sleep(1); //お行儀よく待ちましょう
     $crawler = $client->request('GET', $article->getUrl());
 
     $crawler->filter('div.article-body-inner')->each(function ($node) {
@@ -85,6 +86,12 @@ foreach ($articles as $article) {
          * @var Article $article
          */
         global $article;
+
+        /**
+         * 1記事あたり何回出現しても1カウントとするための、ユニーク数生成用
+         */
+        global $unique;
+        $unique = array(); //記事毎にリセット
 
         echo sprintf("---------\n");
         echo sprintf("%s  ： %s \n", $article->getPublishDatetime('Y-m-d'), $article->getTitle());
@@ -100,6 +107,8 @@ foreach ($articles as $article) {
              */
             global $ranking;
 
+            global $unique;
+
             /**
              * @var Symfony\Component\DomCrawler\Crawler $node_tweet
              */
@@ -108,11 +117,21 @@ foreach ($articles as $article) {
             preg_match('/\(@(.+)\)/', $node_tweet->text(), $matches);
             $twitter_id = $matches[1];
 
-            //カウントを加算
-            if (isset($ranking[$twitter_id]) === false) {
-                $ranking[$twitter_id] = 0; //初カウントなら初期化
+            // 全力２階建 @kabumatome さんのアカウントだけはランキング除外とした
+            if ($twitter_id == 'kabumatome') {
+                return null;
             }
-            $ranking[$twitter_id]++;
+
+            //すでに記事中に登場しているユーザーはカウントアップしない。（ユニーク数算出に変更）
+            if (!in_array($twitter_id, $unique)) {
+                $unique[] = $twitter_id;
+
+                //カウントを加算
+                if (isset($ranking[$twitter_id]) === false) {
+                    $ranking[$twitter_id] = 0; //初カウントなら初期化
+                }
+                $ranking[$twitter_id]++;
+            }
 
             //echo "\x1b[1A\x1b[K"; //表示行追加せず、１行を更新
             //echo sprintf(" Twitter ID ： %s \n", $twitter_id);
@@ -127,11 +146,16 @@ foreach ($articles as $article) {
 echo "------------------\n";
 echo "  ★ 結果発表 ★\n";
 echo "------------------\n";
+
+echo sprintf(" 全 %s 記事中からの登場ユニーク数ランキング2014 \n", count($articles));
+echo " （＊注意）全力２階建 @kabumatome さんのアカウントだけはランキング除外としました\n";
+echo "\n";
+
 $rank = 0;
 arsort($ranking); //登場数順に並べ替え
 foreach ($ranking as $twitter_id => $count) {
     $rank++;
-    echo sprintf("第 %s 位： @%s さん ( %s回 )\n", number_format($rank), $twitter_id, number_format($count));
+    echo sprintf("第 %s 位： <A HREF='https://twitter.com/%s' target='_twitter'>@%s</A> さん ( %s回 ) \n", number_format($rank), $twitter_id, $twitter_id, number_format($count));
 }
 
 echo "\n"; //終わり
@@ -143,7 +167,7 @@ echo "\n"; //終わり
 function simple_html_parse($html)
 {
     $domDocument = new DOMDocument();
-    @$domDocument->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', mb_detect_encoding($html))); //なんかXML返還時に文字化けることがあるので
+    @$domDocument->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', mb_detect_encoding($html))); //なんかXML変換時に文字化けることがあるので
     $xmlString = $domDocument->saveXML();
     $xmlObject = simplexml_load_string($xmlString);
     return $xmlObject;
