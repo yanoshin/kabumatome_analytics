@@ -1,0 +1,11 @@
+{
+    "name": "yanoshin/kabumatome_analytics",
+    "description": "Hack http://kabumatome.doorblog.jp/",
+    "license": "MIT",
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "require": {
+        "fabpot/goutte": "~2.0"
+    }
+}
