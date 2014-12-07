@@ -35,9 +35,10 @@ while ($keep_fetching === true) {
     $crawler = $client->request('GET', $index_url);
 
     $crawler->filter('header.article-header')->each(function ($node) {
+        global $articles;
+        global $keep_fetching;
+
         try {
-            global $articles;
-            global $keep_fetching;
             /**
              * @var Symfony\Component\DomCrawler\Crawler $node
              */
