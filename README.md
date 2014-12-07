@@ -11,7 +11,9 @@ Requirements
 
 こちらのブログ記事もご覧ください。
 ```
-市況かぶ全力２階建さんの人気ランキング2014 作ってみた、ソースコードも公開してみた。 http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html
+[市況かぶ全力２階建さんの人気ランキング2014 作ってみた、ソースコードも公開してみた。
+
+http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html](http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html)
 ```
 
 
