@@ -144,7 +144,7 @@ foreach ($articles as $article) {
  */
 
 echo "------------------\n";
-echo "  ★ 結果発表 ★\n";
+echo sprintf("  ★ 結果発表(全%s名） ★\n", number_format(count($ranking)));
 echo "------------------\n";
 
 echo sprintf(" 全 %s 記事中からの登場ユニーク数ランキング2014 \n", count($articles));
@@ -152,10 +152,20 @@ echo " （＊注意）全力２階建 @kabumatome さんのアカウントだけ
 echo "\n";
 
 $rank = 0;
+$prev_count = 0;
+$prev_rank = 1;
+$current_rank = null;
 arsort($ranking); //登場数順に並べ替え
 foreach ($ranking as $twitter_id => $count) {
     $rank++;
-    echo sprintf("第 %s 位： <A HREF='https://twitter.com/%s' target='_twitter'>@%s</A> さん ( %s回 ) \n", number_format($rank), $twitter_id, $twitter_id, number_format($count));
+    if($prev_count==$count) {
+        $current_rank = $prev_rank;
+    } else {
+        $current_rank = $rank;
+        $prev_rank = $rank;
+    }
+    echo sprintf("第 %s 位： <A HREF='https://twitter.com/%s' target='_twitter'>@%s</A> さん ( %s回 ) \n", number_format($current_rank), $twitter_id, $twitter_id, number_format($count));
+    $prev_count = $count;
 }
 
 echo "\n"; //終わり
