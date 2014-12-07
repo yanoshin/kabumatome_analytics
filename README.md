@@ -9,12 +9,19 @@ Requirements
 
 ブログサイト「[市況かぶ全力２階建](http://kabumatome.doorblog.jp/)」さんの２０１４年中の記事に引用登場したTwitterアカウントのランキングを集計します。
 
+こちらのブログ記事もご覧ください。
+```
+市況かぶ全力２階建さんの人気ランキング2014 作ってみた、ソースコードも公開してみた。 http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html
+```
+
+
 ## Rule
 
 - ２階建さんの２０１４年中の公開記事を対象にしています。
 - １記事につき何回引用されていても登場１回とカウントしてます。（期間はconfig.phpにて定義）
 - 全力２階建 @kabumatome さんのアカウントだけはランキング除外としました。
 - 一気に処理して全力2階建さんへ負荷をかけないよう、HTMLリクエストには毎回1秒のウェイトをかけています。（だからちょっと時間かかるので、待っててね）
+
 
 # SETUP
 
@@ -29,6 +36,7 @@ HTMLパーサのGoutteなど必要なライブラリをcomposerにて導入し�
 $ curl -sS https://getcomposer.org/installer | php
 $ ./composer.phar update
 ```
+
 
 # How to use
 
