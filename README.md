@@ -1,5 +1,8 @@
-市況かぶ全力2階建さん 登場者ランキング2014
+市況かぶ全力2階建さん 登場者ランキング2015
 ====================
+
+【Update!]2015年に対応しました。（2015-11-25)
+
 
 Requirements
 
@@ -7,18 +10,18 @@ Requirements
 
 # Description
 
-ブログサイト「[市況かぶ全力２階建](http://kabumatome.doorblog.jp/)」さんの２０１４年中の記事に引用登場したTwitterアカウントのランキングを集計します。
+ブログサイト「[市況かぶ全力２階建](http://kabumatome.doorblog.jp/)」さんの2015年中の記事に引用登場したTwitterアカウントのランキングを集計します。
 
 こちらのブログ記事もご覧ください。
 
-- [市況かぶ全力２階建さんの人気ランキング2014 作ってみた、ソースコードも公開してみた。 | YANOSHIN blog](http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html)
+- （昨年版）[市況かぶ全力２階建さんの人気ランキング2014 作ってみた、ソースコードも公開してみた。 | YANOSHIN blog](http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html)
 - [http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html](http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html)
 
 
 
 ## Rule
 
-- ２階建さんの２０１４年中の公開記事を対象にしています。（期間はconfig.phpにて定義）
+- ２階建さんの2015年中の公開記事を対象にしています。（期間はconfig.phpにて定義）
 - １記事につき何回引用されていても登場１回とカウントしてます。
 - 全力２階建 @kabumatome さんのアカウントだけはランキング除外としました。
 - 一気に処理して全力2階建さんへ負荷をかけないよう、HTMLリクエストには毎回1秒のウェイトをかけています。（だからちょっと時間かかるので、待っててね）
@@ -60,7 +63,7 @@ $ php hack_kabumatome.php
 ——————
 ★ 結果発表 ★
 ——————
-全 532 記事中からの登場ユニーク数ランキング2014
+全 532 記事中からの登場ユニーク数ランキング2015
 (略）
 ```
 

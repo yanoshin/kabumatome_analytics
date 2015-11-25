@@ -148,7 +148,7 @@ echo "------------------\n";
 echo sprintf("  ★ 結果発表(全%s名） ★\n", number_format(count($ranking)));
 echo "------------------\n";
 
-echo sprintf(" 全 %s 記事中からの登場ユニーク数ランキング2014 \n", count($articles));
+echo sprintf(" 全 %s 記事中からの登場ユニーク数ランキング2015 \n", count($articles));
 echo " （＊注意）全力２階建 @kabumatome さんのアカウントだけはランキング除外としました\n";
 echo "\n";
 
