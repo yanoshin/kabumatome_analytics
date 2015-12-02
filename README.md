@@ -14,7 +14,8 @@ Requirements
 
 こちらのブログ記事もご覧ください。
 
-- （昨年版）[市況かぶ全力２階建さんの人気ランキング2014 作ってみた、ソースコードも公開してみた。 | YANOSHIN blog](http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html)
+- （2015年版）[市況かぶ全力２階建さんの人気ランキング2015を作ってみた。（１２月初旬時点） | YANOSHIN blog](http://blog.bresson.biz/2015/12/kabumatome_ranking_2015.html)
+- （2014版）[市況かぶ全力２階建さんの人気ランキング2014 作ってみた、ソースコードも公開してみた。 | YANOSHIN blog](http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html)
 - [http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html](http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html)
 
 
