@@ -78,6 +78,7 @@ while ($keep_fetching === true) {
 
 $unique = array();
 $ranking = array();
+$link_art = array();
 foreach ($articles as $article) {
     sleep(1); //お行儀よく待ちましょう
     $crawler = $client->request('GET', $article->getUrl());
@@ -111,6 +112,16 @@ foreach ($articles as $article) {
             global $unique;
 
             /**
+             * @var array $link_art
+             */
+            global $link_art;
+
+            /**
+             * @var Article $article
+             */
+            global $article;
+
+            /**
              * @var Symfony\Component\DomCrawler\Crawler $node_tweet
              */
 
@@ -132,6 +143,7 @@ foreach ($articles as $article) {
                     $ranking[$twitter_id] = 0; //初カウントなら初期化
                 }
                 $ranking[$twitter_id]++;
+                $link_art[$twitter_id][] = $article->getUrl();
             }
 
             //echo "\x1b[1A\x1b[K"; //表示行追加せず、１行を更新
@@ -144,13 +156,13 @@ foreach ($articles as $article) {
  * ランキングを表示する
  */
 
-echo "------------------\n";
-echo sprintf("  ★ 結果発表(全%s名） ★\n", number_format(count($ranking)));
-echo "------------------\n";
+echo "------------------</br>\n";
+echo sprintf("  ★ 結果発表(全%s名） ★</br>\n", number_format(count($ranking)));
+echo "------------------</br>\n";
 
-echo sprintf(" 全 %s 記事中からの登場ユニーク数ランキング2016 \n", count($articles));
-echo " （＊注意）全力２階建 @kabumatome さんのアカウントだけはランキング除外としました\n";
-echo "\n";
+echo sprintf(" 全 %s 記事中からの登場ユニーク数ランキング2016 </br>\n", count($articles));
+echo " （＊注意）全力２階建 @kabumatome さんのアカウントだけはランキング除外としました</br>\n";
+echo "</br>\n";
 
 $rank = 0;
 $prev_count = 0;
@@ -165,8 +177,26 @@ foreach ($ranking as $twitter_id => $count) {
         $current_rank = $rank;
         $prev_rank = $rank;
     }
-    echo sprintf("第 %s 位： <A HREF='https://twitter.com/%s' target='_twitter'>@%s</A> さん ( %s回 ) \n", number_format($current_rank), $twitter_id, $twitter_id, number_format($count));
+    echo sprintf("第 %s 位： <A HREF='https://twitter.com/%s' target='_twitter' rel='nofollow'>@%s</A> さん ( %s回 )\n", number_format($current_rank), $twitter_id, $twitter_id, number_format($count));
+
+    if(isset($link_art[$twitter_id])){
+        // 3件以上登場する人は改行を挿入
+        if(count($link_art[$twitter_id])>2){
+            echo sprintf("</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;\n");
+        }
+
+        foreach ($link_art[$twitter_id] as $cnt=>$la){
+            if($cnt == 0){
+                $caption = sprintf('[登場記事%s]', $cnt+1);
+            } else {
+                $caption = sprintf('[%s]', $cnt+1);
+            }
+            echo sprintf("\t&nbsp;<A HREF='%s' target='_twitter' rel='nofollow'>%s</A> ", $la, $caption);
+        }
+    }
     $prev_count = $count;
+
+    echo sprintf("</br>\n");
 }
 
 echo "\n"; //終わり
