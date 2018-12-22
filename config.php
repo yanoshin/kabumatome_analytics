@@ -9,8 +9,8 @@ date_default_timezone_set('Asia/Tokyo');
 define('TMPL_URL_INDEX', 'http://kabumatome.doorblog.jp/?p=%d');
 
 //集計する範囲
-define('DATETIME_START', strtotime('2017-01-01 00:00:00'));
-define('DATETIME_END', strtotime('2017-12-31 23:59:59'));
+define('DATETIME_START', strtotime('2018-01-01 00:00:00'));
+define('DATETIME_END', strtotime('2018-12-31 23:59:59'));
 
 
 
