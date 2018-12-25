@@ -160,7 +160,7 @@ echo "------------------</br>\n";
 echo sprintf("  ★ 結果発表(全%s名） ★</br>\n", number_format(count($ranking)));
 echo "------------------</br>\n";
 
-echo sprintf(" 全 %s 記事中からの登場ユニーク数ランキング2016 </br>\n", count($articles));
+echo sprintf(" 全 %s 記事中からの登場ユニーク数ランキング </br>\n", count($articles));
 echo " （＊注意）全力２階建 @kabumatome さんのアカウントだけはランキング除外としました</br>\n";
 echo "</br>\n";
 
