@@ -125,9 +125,19 @@ foreach ($articles as $article) {
              * @var Symfony\Component\DomCrawler\Crawler $node_tweet
              */
 
-            //TwitterアカウントIDは本文の中に(@hogehoge)とあるだけなので、正規表現でマッチングさせる
-            preg_match('/\(@(.+)\)/', $node_tweet->text(), $matches);
-            $twitter_id = $matches[1];
+            // 2020-12 Twitter IDの取得方法を変えた
+            try{
+                preg_match('/@(.+)/', $node_tweet->filter('span.nickname')->text(), $matches);
+                $twitter_id = $matches[1];
+            }catch(Exception $e){
+                //TwitterアカウントIDは本文の中に(@hogehoge)とあるだけなので、正規表現でマッチングさせる
+                preg_match('/\(@(.+)\)/', $node_tweet->text(), $matches);
+                $twitter_id = $matches[1];
+            }
+            if(is_null($twitter_id)){
+                preg_match('/https\:\/\/twitter.com\/(.+)/', $node_tweet->filter('a')->first()->attr('href'), $matches);
+                $twitter_id = $matches[1];
+            }
 
             // 全力２階建 @kabumatome さんのアカウントだけはランキング除外とした
             if ($twitter_id == 'kabumatome') {
