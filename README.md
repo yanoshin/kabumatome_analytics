@@ -14,8 +14,11 @@ Requirements
 
 こちらのブログ記事もご覧ください。
 
-- （2017年版）市況かぶ全力２階建さんの採用ランキング2017年版つくりました | YANOSHIN blog]( http://blog.bresson.biz/2017/12/kabumatome_ranking_2017.html )
-- （2016年版）市況かぶ全力２階建さんの採用ランキング2016年版つくりました（途中経過発表） | YANOSHIN blog](https://blog.bresson.biz/2016/12/kabumatome_ranking_2016.html)
+- （2020年版）[【コロナに負けルナ！】市況かぶ全力２階建さんの掲載採用ランキング2020年版を発表します](http://blog.bresson.biz/2020/12/kabumatome-ranking-2020.html)
+- （2019年版）[【令和初の】市況かぶ全力２階建さんの掲載採用ランキング2019年版を発表します](https://blog.bresson.biz/2019/12/kabumatome-ranking-2019.html)
+- （2018年版）[市況かぶ全力２階建さんの掲載採用ランキング2018年版を発表します](http://blog.bresson.biz/2018/12/kabumatome_ranking_2018.html)
+- （2017年版）[市況かぶ全力２階建さんの採用ランキング2017年版つくりました | YANOSHIN blog]( http://blog.bresson.biz/2017/12/kabumatome_ranking_2017.html )
+- （2016年版）[市況かぶ全力２階建さんの採用ランキング2016年版つくりました（途中経過発表） | YANOSHIN blog](https://blog.bresson.biz/2016/12/kabumatome_ranking_2016.html)
 - （2015年版）[市況かぶ全力２階建さんの人気ランキング2015を作ってみた。（１２月初旬時点） | YANOSHIN blog](http://blog.bresson.biz/2015/12/kabumatome_ranking_2015.html)
 - （2014版）[市況かぶ全力２階建さんの人気ランキング2014 作ってみた、ソースコードも公開してみた。 | YANOSHIN blog](http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html)
 - [http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html](http://blog.bresson.biz/2014/12/kabumatome_ranking_2014_in_progress.html)
