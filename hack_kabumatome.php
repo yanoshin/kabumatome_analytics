@@ -13,6 +13,8 @@ use Goutte\Client;
 //setup Goutte
 $client = new Client();
 $client->getClient()->setDefaultOption('config/curl/' . CURLOPT_TIMEOUT, 60);
+// GuzzleHttp\ClientのSSL証明書の検証問題の回避
+$client->getClient()->setDefaultOption('config/curl/' . CURLOPT_SSL_VERIFYPEER, false);
 
 /*
  * 記事一覧画面を解析する
