@@ -14,6 +14,8 @@ Requirements
 
 こちらのブログ記事もご覧ください。
 
+- （2022年版）[【毎年恒例】【2022年版】市況かぶ全力２階建さんの掲載採用ランキング発表！！](https://blog.bresson.biz/2022/12/kabumatome-ranking-2022.html)
+- （2021年版）[【2021年版】市況かぶ全力２階建さんの掲載採用ランキングを発表します](https://blog.bresson.biz/2021/12/kabumatome-ranking-2021.html)
 - （2020年版）[【コロナに負けルナ！】市況かぶ全力２階建さんの掲載採用ランキング2020年版を発表します](http://blog.bresson.biz/2020/12/kabumatome-ranking-2020.html)
 - （2019年版）[【令和初の】市況かぶ全力２階建さんの掲載採用ランキング2019年版を発表します](https://blog.bresson.biz/2019/12/kabumatome-ranking-2019.html)
 - （2018年版）[市況かぶ全力２階建さんの掲載採用ランキング2018年版を発表します](http://blog.bresson.biz/2018/12/kabumatome_ranking_2018.html)
