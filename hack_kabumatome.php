@@ -4,6 +4,9 @@
 //Special thanks to 市況かぶ全力２階建さん
 //http://kabumatome.doorblog.jp/
 
+// Depricatedメッセージ抑制（依存しているライブラリが古いままなので）
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
+
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/models/article.php';
