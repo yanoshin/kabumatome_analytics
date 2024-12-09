@@ -192,7 +192,7 @@ foreach ($ranking as $twitter_id => $count) {
         $current_rank = $rank;
         $prev_rank = $rank;
     }
-    echo sprintf("第 %s 位： <A HREF='https://twitter.com/%s' target='_twitter' rel='nofollow'>@%s</A> さん ( %s回 )\n", number_format($current_rank), $twitter_id, $twitter_id, number_format($count));
+    echo sprintf("<p>第 %s 位： <A HREF='https://twitter.com/%s' target='_twitter' rel='nofollow'>@%s</A> さん ( %s回 )</p>\n", number_format($current_rank), $twitter_id, $twitter_id, number_format($count));
 
     if(isset($link_art[$twitter_id])){
         // 3件以上登場する人は改行を挿入
