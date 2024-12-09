@@ -12,8 +12,9 @@ Requirements
 
 ブログサイト「[市況かぶ全力２階建](http://kabumatome.doorblog.jp/)」さんの2024年中の記事に引用登場したTwitterアカウントのランキングを集計します。
 
-こちらのブログ記事もご覧ください。
+過去の開催年のランキングはこちらのブログ記事もご覧ください。
 
+- （2023年版）[【2023年版】市況かぶ全力２階建さんの掲載採用ランキングを発表します](https://blog.bresson.biz/2023/12/kabumatome-ranking-2023.html)
 - （2022年版）[【毎年恒例】【2022年版】市況かぶ全力２階建さんの掲載採用ランキング発表！！](https://blog.bresson.biz/2022/12/kabumatome-ranking-2022.html)
 - （2021年版）[【2021年版】市況かぶ全力２階建さんの掲載採用ランキングを発表します](https://blog.bresson.biz/2021/12/kabumatome-ranking-2021.html)
 - （2020年版）[【コロナに負けルナ！】市況かぶ全力２階建さんの掲載採用ランキング2020年版を発表します](http://blog.bresson.biz/2020/12/kabumatome-ranking-2020.html)
